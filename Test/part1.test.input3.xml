@@ -1,0 +1,80 @@
+<commands
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="part1in.xsd"
+ 	spatialWidth="128"
+ 	spatialHeight="128">
+    
+    <!--Empty errors-->
+    <listCities sortBy="name"/>
+    <printPRQuadtree/>
+    <nearestCity x="64" y="64"/>
+     
+    <!--Initialize some cities and map them-->
+    <createCity name="Baltimore" y="39" x="76" radius="5" color="black"/>
+    <createCity name="Chicago" x="81" y="47" radius="5"  color="black"/>
+    <createCity name="Atlanta" x="84" y="33" radius="5"  color="black"/>
+    <createCity name="Los_Angeles" x="118" y="33" radius="5"  color="black"/>
+    <createCity name="Miami" x="80" y="25" radius="5"  color="black"/>
+    <createCity name="Boston" x="71" y="42" radius="50"  color="black"/>
+    <createCity name="Baltimore2" y="0" x="0" radius="5" color="black"/>
+    <createCity name="Chicago2" x="128" y="128" radius="5"  color="black"/>
+    <createCity name="Atlanta2" x="34" y="33" radius="5"  color="black"/>
+    <createCity name="Los_Angeles2" x="118" y="123" radius="5"  color="black"/>
+    <createCity name="Miami2" x="22" y="95" radius="5"  color="black"/>
+    <createCity name="Boston2" x="71" y="82" radius="50"  color="black"/>
+    <mapCity name="Baltimore"/>
+    <mapCity name="Chicago"/>
+    <mapCity name="Atlanta"/>
+    <mapCity name="Los_Angeles"/>
+    <mapCity name="Miami"/>
+    <mapCity name="Boston"/>
+    <mapCity name="Atlanta2"/>
+    <mapCity name="Los_Angeles2"/>
+    <mapCity name="Miami2"/>
+    <mapCity name="Boston2"/>
+    
+    <saveMap name="testOutAll"/>
+    
+    <!--createCity errors-->
+    <createCity name="Baltimore" y="39" x="76" radius="5" color="black"/>
+    <createCity name="Baltimore" y="39" x="75" radius="5" color="black"/>
+        
+    <!--deleteCity sucess and error-->
+    <deleteCity name="Atlanta"/>
+    <deleteCity name="Lambertville"/>
+        
+    <!--listCities-->
+    <listCities sortBy="name"/>
+    <listCities sortBy="coordinate"/>
+            
+    <!--mapCity, 3 of these should fail but 1 should not-->
+    <mapCity name="bla"/>
+    <mapCity name="Baltimore2"/>
+    <mapCity name="Chicago2"/>
+    <mapCity name="Miami"/>
+ 
+    <saveMap name="testOutAll2"/>
+    <printPRQuadtree/>
+ 
+    <!--unmapCity test-->
+    <unmapCity name="BB"/>
+    <unmapCity name="Boston"/>
+    <unmapCity name="Boston"/>
+ 
+    <printPRQuadtree/>
+ 
+    <!--rangeCitiesCity test-->
+    <rangeCities x="64" y="64" radius="33" saveMap="circle1"/>
+    <rangeCities x="104" y="64" radius="8" saveMap="circle2"/>
+    <rangeCities x="64" y="64" radius="33" />
+    <rangeCities x="81" y="47" radius="0" />
+  
+    <!--nearestCity test-->
+    <nearestCity x="1000" y="255"/>
+    <nearestCity x="64" y="64"/>
+    <nearestCity x="81" y="47"/>
+ 
+ 
+    <!--clearing all-->
+    <clearAll/>
+</commands>

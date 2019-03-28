@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="part1in.xsd" spatialWidth="128" spatialHeight="128">
+    <createCity name="Baltimore" y="101" x="25" radius="5" color="black" />
+    <createCity name="Baltimore" y="101" x="25" radius="5" color="black" />
+    <createCity name="Baltimore" y="100" x="25" radius="5" color="black" />
+    <createCity name="SameCoordinates" y="101" x="25" radius="5" color="black" />
+    <createCity name="Chicago" x="75" y="25" radius="5" color="black" />
+    <createCity name="Atlanta" x="25" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles" x="75" y="75" radius="5" color="black" />
+    <deleteCity name="Baltimore"/>
+    <deleteCity name="Baltimore"/>
+    <deleteCity name="DoesntExist"/>
+    <listCities sortBy="name"/>
+    <listCities sortBy="coordinate"/>
+    <clearAll/>
+    <listCities sortBy="name"/>
+    <listCities sortBy="coordinate"/>
+    <printPRQuadtree/>
+    <nearestCity x="25" y="75"/>
+    <rangeCities x="10" y="10" radius="1000"/>
+    <createCity name="Baltimore" y="101" x="25" radius="5" color="black" />
+    <createCity name="Baltimore" y="101" x="25" radius="5" color="black" />
+    <createCity name="Baltimore" y="100" x="25" radius="5" color="black" />
+    <createCity name="SameCoordinates" y="101" x="25" radius="5" color="black" />
+    <createCity name="OutOfBounds" x="1000" y="10000" radius="5" color="black" />
+    <createCity name="Atlanta" x="25" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles" x="75" y="75" radius="5" color="black" />
+    <mapCity name="Baltimore" />
+    <mapCity name="Baltimore" />
+    <mapCity name="NotInDictionary" />
+    <mapCity name="Atlanta" />
+    <mapCity name="Los_Angeles" />
+    <unmapCity name="Baltimore"/>
+    <unmapCity name="Baltimore"/>
+    <unmapCity name="NotInDictionary"/>
+    <saveMap name="picture"/>
+    <rangeCities x="25" y="75" radius="0"/>
+    <rangeCities x="25" y="76" radius="2"/>
+    <rangeCities x="25" y="100" radius="2"/>
+    <nearestCity x="25" y="100"/>
+    <nearestCity x="25" y="25"/>
+    <nearestCity x="25" y="75"/>
+    <nearestCity x="25" y="10000"/>
+    <printPRQuadtree />
+
+    <createCity name="Los_Angeles1" x="0" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles2" x="1" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles3" x="2" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles4" x="3" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles5" x="4" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles6" x="5" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles7" x="6" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles8" x="7" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles9" x="8" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles0" x="9" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles10" x="10" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles11" x="100" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles12" x="99" y="100" radius="5" color="black" />
+    <createCity name="Los_Angeles13" x="99" y="99" radius="5" color="black" />
+    <createCity name="Los_Angeles14" x="98" y="99" radius="5" color="black" />
+    <createCity name="Los_Angeles15" x="99" y="98" radius="5" color="black" />
+    <createCity name="Los_Angeles16" x="98" y="98" radius="5" color="black" />
+    <createCity name="Los_Angeles17" x="75" y="7" radius="5" color="black" />
+    <createCity name="Los_Angeles18" x="75" y="5" radius="5" color="black" />
+    <createCity name="Los_Angeles19" x="75" y="25" radius="5" color="black" />
+    <createCity name="Los_Angeles20" x="75" y="123" radius="5" color="black" />
+    <createCity name="Los_Angeles21" x="75" y="21" radius="5" color="black" />
+    <createCity name="Los_Angeles22" x="75" y="74" radius="5" color="black" />
+    <createCity name="Los_Angeles23" x="75" y="23" radius="5" color="black" />
+    <createCity name="Los_Angeles24" x="75" y="52" radius="5" color="black" />
+    <createCity name="Los_Angeles25" x="75" y="12" radius="5" color="black" />
+    <createCity name="Los_Angeles26" x="13" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles27" x="41" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles28" x="42" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles29" x="63" y="75" radius="5" color="black" />
+    <createCity name="Los_Angeles30" x="0" y="1" radius="5" color="black" />
+    <createCity name="Los_Angeles31" x="24" y="24" radius="5" color="black" />
+    <createCity name="Los_Angeles32" x="0" y="0" radius="5" color="black" />
+    <mapCity name="Los_Angeles1" />
+    <mapCity name="Los_Angeles2" />
+    <mapCity name="Los_Angeles3" />
+    <mapCity name="Los_Angeles4" />
+    <mapCity name="Los_Angeles5" />
+    <mapCity name="Los_Angeles6" />
+    <mapCity name="Los_Angeles7" />
+    <mapCity name="Los_Angeles8" />
+    <mapCity name="Los_Angeles9" />
+    <mapCity name="Los_Angeles10" />
+    <mapCity name="Los_Angeles11" />
+    <mapCity name="Los_Angeles12" />
+    <mapCity name="Los_Angeles13" />
+    <mapCity name="Los_Angeles14" />
+    <mapCity name="Los_Angeles15" />
+    <mapCity name="Los_Angeles16" />
+    <mapCity name="Los_Angeles17" />
+    <mapCity name="Los_Angeles18" />
+    <mapCity name="Los_Angeles19" />
+    <mapCity name="Los_Angeles20" />
+    <mapCity name="Los_Angeles21" />
+    <mapCity name="Los_Angeles22" />
+    <mapCity name="Los_Angeles23" />
+    <mapCity name="Los_Angeles24" />
+    <mapCity name="Los_Angeles25" />
+    <mapCity name="Los_Angeles26" />
+    <mapCity name="Los_Angeles27" />
+    <mapCity name="Los_Angeles28" />
+    <mapCity name="Los_Angeles29" />
+    <mapCity name="Los_Angeles30" />
+    <mapCity name="Los_Angeles31" />
+    <mapCity name="Los_Angeles32" />
+    <mapCity name="Los_Angeles33" />
+    <mapCity name="Los_Angeles34" />
+    <printPRQuadtree/>
+    <saveMap name="pictureMap"/>
+    <deleteCity name="Los_Angeles2"/>
+    <deleteCity name="Los_Angeles10"/>
+    <deleteCity name="Los_Angeles23"/>
+    <unmapCity name="Los_Angeles21"/>
+    <unmapCity name="Los_Angeles10"/>
+    <printPRQuadtree/>
+</commands>

@@ -1,0 +1,28 @@
+<commands
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="part1in.xsd"
+   spatialWidth="8"
+   spatialHeight="8">
+ <createCity name="Baltimore" x="7" y="7" radius="5" color="black"/>
+ <createCity name="Chicago" x="3" y="3" radius="5"  color="black"/>
+ <createCity name="Atlanta" x="1" y="1" radius="5"  color="black"/>
+ <createCity name="Rockville" x="2" y="2" radius="5"  color="black"/>
+ <mapCity name="Baltimore"/>
+ <mapCity name="Chicago"/>
+ <mapCity name="Atlanta"/>
+ <deleteCity name = "Rockville"/>
+ <deleteCity name = "Baltimore"/>
+ <deleteCity name = "Error"/>
+	
+ <printPRQuadtree/>
+</commands><commands
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="part1in.xsd"
+ 	spatialWidth="8"
+ 	spatialHeight="8">
+ <createCity name="A" y="4" x="4" radius="1" color="black"/>
+ <createCity name="B" x="2" y="2" radius="1"  color="black"/>
+ <createCity x="5" radius="1" color="red" name="C" y="3" /><createCity x="4" radius="1" color="red" name="E" y="5" /><listCities sortBy="coordinate"/><mapCity name="A" /><mapCity
+		name="B" /><mapCity name="C" /><mapCity name="D" /><mapCity
+		name="E" /><printPRQuadtree />
+</commands>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<commands spatialHeight="800" spatialWidth="800" xsi:noNamespaceSchemaLocation="part1in.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <createCity color="orange" radius="1" y="400" x="400" name="A"/>
+    <createCity color="orange" radius="1" y="300" x="300" name="B"/>
+    <createCity color="orange" radius="1" y="500" x="300" name="C"/>
+    <createCity color="orange" radius="1" y="500" x="500" name="D"/>
+    <createCity color="orange" radius="1" y="300" x="500" name="E"/>
+    <createCity color="orange" radius="1" y="700" x="700" name="F"/>
+    <mapCity name="F"/>
+    <mapCity name="B"/>
+    <mapCity name="C"/>
+    <mapCity name="D"/>
+    <mapCity name="E"/>
+    <rangeCities x="34" y="34" radius="0" saveMap="rangeMap"/>
+    <rangeCities x="700" y="2333" radius="0"/>
+    <printPRQuadtree/>
+</commands>

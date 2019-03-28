@@ -1,0 +1,14 @@
+<commands xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="part1in.xsd" spatialWidth="256" spatialHeight="256">
+    <createCity name="A" x="300" y="50" radius="2" color="red"/>
+    <createCity name="B" x="300" y="15" radius="4" color="yellow"/>
+    <createCity name="C" x="50" y="50" radius="8" color="black"/>
+    <createCity name="D" x="50" y="15" radius="8" color="black"/>
+    <printPRQuadtree/> 
+<mapCity name="A"/>
+<mapCity name="C"/>
+<mapCity name="D"/>
+    <deleteCity name="A"/>
+<deleteCity name="B"/>
+<deleteCity name="D"/>
+    <printPRQuadtree/> 
+</commands>
