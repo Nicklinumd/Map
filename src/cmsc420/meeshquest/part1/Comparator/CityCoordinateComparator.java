@@ -4,6 +4,10 @@ import java.util.Comparator;
 
 import cmsc420.meeshquest.part1.structure.City;
 
+/*
+ * Coordinate Comparator
+ * Order by y first then x
+ */
 public class CityCoordinateComparator implements Comparator<City> {
 	@Override
 	public int compare(City c1, City c2) {

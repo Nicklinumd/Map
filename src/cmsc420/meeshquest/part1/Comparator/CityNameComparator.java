@@ -4,6 +4,10 @@ import java.util.Comparator;
 
 import cmsc420.meeshquest.part1.structure.City;
 
+/*
+ * Name comparator
+ * Ordered by string
+ */
 public class CityNameComparator implements Comparator<City> {
 
 	@Override

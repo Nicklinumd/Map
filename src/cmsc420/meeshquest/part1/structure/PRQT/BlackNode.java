@@ -3,6 +3,10 @@ package cmsc420.meeshquest.part1.structure.PRQT;
 import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.CityCoordinates;
 
+/*
+ * Black node for PR quadtree
+ * Contains four edges and a city object
+ */
 public class BlackNode implements PRQT {
 	private City city;
 	private int left;
@@ -10,6 +14,9 @@ public class BlackNode implements PRQT {
 	private int top;
 	private int bottom;
 	
+	/*
+	 * Basic constructor
+	 */
 	public BlackNode(int right, int left, int top, int bottom, City city) {
 		setRight(right);
 		setLeft(left);
@@ -18,10 +25,16 @@ public class BlackNode implements PRQT {
 		setCity(city);
 	}
 	
+	/*
+	 * Constructor for same edges
+	 */
 	public BlackNode(PRQT prqt) {
 		this(prqt.getRight(), prqt.getLeft(), prqt.getTop(), prqt.getBottom(), prqt.getCity());
 	}
 	
+	/*
+	 * Constructor for same edges with specified city
+	 */
 	public BlackNode(PRQT prqt, City city) {
 		this(prqt);
 		setCity(city);
@@ -73,6 +86,10 @@ public class BlackNode implements PRQT {
 		this.city = city;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see cmsc420.meeshquest.part1.structure.PRQT.PRQT#getType()
+	 */
 	@Override
 	public String getType() {
 		return "black";

@@ -2,6 +2,10 @@ package cmsc420.meeshquest.part1.structure;
 
 import java.awt.geom.Point2D;
 
+/*
+ * City coordinates object
+ * Contains coordinates and city
+ */
 public class CityCoordinates extends Point2D.Float {
 	private City city;
 	

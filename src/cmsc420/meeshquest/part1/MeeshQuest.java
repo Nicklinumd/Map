@@ -11,6 +11,10 @@ import org.xml.sax.SAXException;
 
 import cmsc420.xml.XmlUtility;
 
+/*
+ * Main class
+ * Takes file and parse command
+ */
 public class MeeshQuest {
 	private Document results;
     public static void main(String[] args) throws ParserConfigurationException {    	
@@ -30,10 +34,13 @@ public class MeeshQuest {
         	
         	int width = Integer.parseInt(commandNode.getAttribute("spatialWidth"));
         	int height = Integer.parseInt(commandNode.getAttribute("spatialHeight"));
+        	// Set up cityAction
         	CityAction cityAction = new CityAction(width, height);
         	
+        	// Set up results
         	new CityResult(results);
         	
+        	// Parse each command, and sends to cityAction.java
         	final NodeList nl = commandNode.getChildNodes();
         	for (int i = 0; i < nl.getLength(); i++) {
         		if (nl.item(i).getNodeType() == Document.ELEMENT_NODE) {
@@ -80,6 +87,7 @@ public class MeeshQuest {
         }
     }
     
+    // Fatal error
     private void addFatalError() {
         try {
             results = XmlUtility.getDocumentBuilder().newDocument();

@@ -11,6 +11,10 @@ import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.PRQT.GrayNode;
 import cmsc420.meeshquest.part1.structure.PRQT.PRQT;
 
+/* 
+ * Print every request in xml
+ * Every method is static
+ */
 public class CityResult {
 	private static Document results;
 	private static Element resElt;
@@ -23,11 +27,18 @@ public class CityResult {
 		list = new ArrayList<Element>();
 	}
 
+	/* 
+	 * Single error message
+	 */
 	public static void error(String message) {
 		Element elt = results.createElement(message);
 		resElt.appendChild(elt);
 	}
 	
+	/*
+	 * Helper method for head
+	 * Success or error
+	 */
 	private static Element setHead(String status) {
 		Element elt;
 		if (status.equals("success")) {
@@ -39,6 +50,9 @@ public class CityResult {
 		return elt;
 	}
 	
+	/*
+	 * Output results for create city
+	 */
 	public static void createCityResult(String status, City city) {
 		Element elt1 = setHead(status);
 		Element elt2 = results.createElement("command");
@@ -70,7 +84,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 	
-
+	/*
+	 * Output results for delete city
+	 */
 	public static void deleteCityResult(String status, String name, boolean unmap, City city) {
 		Element elt1 = setHead(status);
 		
@@ -99,6 +115,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 	
+	/*
+	 * Output results for list cities
+	 */
 	public static void listCitiesResult(String status, String sortBy) {
 		Element elt1 = setHead(status);
 		
@@ -125,6 +144,9 @@ public class CityResult {
 		list.clear();
 	}
 	
+	/*
+	 * Output results for clear all
+	 */
 	public static void clearAllResult() {
 		Element elt1 = results.createElement("success");
 		Element elt2 = results.createElement("command");
@@ -137,6 +159,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 	
+	/*
+	 * Output results for map city
+	 */
 	public static void mapCityResult(String status, String name) {
 		Element elt1 = setHead(status);
 		
@@ -156,6 +181,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 	
+	/*
+	 * Output results for unmap city
+	 */
 	public static void unmapCityResult(String status, String name) {
 		Element elt1 = setHead(status);
 		
@@ -176,6 +204,9 @@ public class CityResult {
 		list.clear();
 	}
 	
+	/*
+	 * Output results for print PR quadtree
+	 */
 	public static void printPRQTResult(String status, PRQT prqt) {
 		Element elt1 = setHead(status);
 		
@@ -195,6 +226,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 
+	/*
+	 * Output results for range cities
+	 */
 	public static void rangeCitiesResult(int x, int y, int radius, String name) {
 		Element elt1;
 		String status;
@@ -241,6 +275,9 @@ public class CityResult {
 		list.clear();
 	}
 	
+	/*
+	 * Output results for save map
+	 */
 	public static void saveMapResult(String status, String name) {
 		Element elt1 = setHead(status);
 		
@@ -260,6 +297,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 
+	/*
+	 * Output results for nearest city
+	 */
 	public static void nearestCityResult(String status, int x, int y, City city) {
 		Element elt1 = setHead(status);
 		
@@ -290,6 +330,9 @@ public class CityResult {
 		resElt.appendChild(elt1);
 	}
 	
+	/*
+	 * Helper method for listing cities
+	 */
 	public static void addCityList(City city) {
 		Element elt1 = results.createElement("city");
 		elt1.setAttribute("color", city.getColor());
@@ -300,6 +343,9 @@ public class CityResult {
 		list.add(elt1);
 	}
 	
+	/* 
+	 * Helper method for print PR quadtree
+	 */
 	public static Element addNode(PRQT prqt) {
 		Element elt1;
 		String type = prqt.getType();

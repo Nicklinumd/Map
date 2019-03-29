@@ -3,12 +3,18 @@ package cmsc420.meeshquest.part1.structure.PRQT;
 import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.CityCoordinates;
 
+/*
+ * White node for PR quadtree
+ */
 public class WhiteNode implements PRQT {
 	private int left;
 	private int right;
 	private int top;
 	private int bottom;
 	
+	/*
+	 * Basic constructor
+	 */
 	public WhiteNode(int right, int left, int top, int bottom) {
 		setRight(right);
 		setLeft(left);
@@ -16,6 +22,9 @@ public class WhiteNode implements PRQT {
 		setBottom(bottom);
 	}
 	
+	/*
+	 * Constructor for same edges
+	 */
 	public WhiteNode(PRQT prqt) {
 		setRight(prqt.getRight());
 		setLeft(prqt.getLeft());

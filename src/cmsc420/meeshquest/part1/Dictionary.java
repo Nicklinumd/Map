@@ -10,6 +10,12 @@ import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.CityCoordinates;
 import cmsc420.meeshquest.part1.structure.CityNode;
 
+/* 
+ * Dictionary for storing cities
+ * It contains two parts: 
+ * 1. a binary search tree for storing and getting city objects ordered by name
+ * 2. a set of city object ordered by coordinates
+ */
 public class Dictionary {
 	public Set<City> coordinatesSet;
 	public CityNode head;
@@ -27,6 +33,11 @@ public class Dictionary {
 		this.head = head;
 	}
 	
+	/* 
+	 * Insert city into bst
+	 * City can't have same names or coordinates
+	 * Coordinates are checked in CityAction.java
+	 */
 	public CityNode insert(City city, Comparator<City> comparator) {
 		return insert(city, head, comparator);
 	}
@@ -53,6 +64,9 @@ public class Dictionary {
 		}
 	}
 	
+	/* 
+	 * Remove city from bst
+	 */
 	public void remove(String name) {
 		head = remove(name, head);
 	}
@@ -68,6 +82,7 @@ public class Dictionary {
 			} else if (head.right == null) {
 				return head.left;
 			} else {
+				// Replace with the least value city in the right branch
 				head.setCity(minCity(head.right));
 				head.right = remove(head.getName(), head.right);
 			}
@@ -75,6 +90,9 @@ public class Dictionary {
         return head; 
 	}
 	
+	/*
+	 * Helper method for finding the least value city in the tree
+	 */
 	private City minCity(CityNode head) {
 		City min = head.getCity(); 
         while (head.left != null) { 
@@ -84,6 +102,9 @@ public class Dictionary {
         return min;
 	}
 	
+	/*
+	 * Return city object with name
+	 */
 	public City get(String name) {
 		return get(head, name);
 	}
@@ -102,7 +123,10 @@ public class Dictionary {
 		}
 	}
 
-	
+	/*
+	 * Print by name
+	 * Descending order
+	 */
 	public void printByName() {
 		printByName(head);
 	}
@@ -116,6 +140,9 @@ public class Dictionary {
 		printByName(head.left);
 	}
 		
+	/* 
+	 * Print by coordinate
+	 */
 	public void printByCoordinate() {
 		Iterator<City> it = coordinatesSet.iterator(); 
 		while (it.hasNext()) {
@@ -123,6 +150,9 @@ public class Dictionary {
 		}
 	}
 	
+	/*
+	 * Delete all cities
+	 */
 	public CityNode clearTree(CityNode head) {
 		if (head != null) {
 			clearTree(head.left);

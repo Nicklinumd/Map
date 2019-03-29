@@ -1,5 +1,8 @@
 package cmsc420.meeshquest.part1.structure;
 
+/*
+ * City node for bst
+ */
 public class CityNode {
 	private City city;
 	public CityNode left;

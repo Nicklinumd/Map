@@ -4,6 +4,9 @@ import java.util.Comparator;
 
 import org.w3c.dom.Element;
 
+/* 
+ * Compare element by name
+ */
 public class ElementNameComparator implements Comparator<Element> {
 
 	@Override

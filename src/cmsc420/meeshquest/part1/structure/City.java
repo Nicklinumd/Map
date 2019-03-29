@@ -2,6 +2,10 @@ package cmsc420.meeshquest.part1.structure;
 
 import java.awt.geom.*;
 
+/* 
+ * City object
+ * Contains name, coordinates, color, and radius
+ */
 public class City extends Point2D.Float{
 	private String name;
 	private String color;

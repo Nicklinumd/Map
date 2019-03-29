@@ -7,6 +7,12 @@ import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.PRQT.GrayNode;
 import cmsc420.meeshquest.part1.structure.PRQT.PRQT;
 
+/* 
+ * Comparator for priorityQueue used for rangeCities and nearestCities
+ * Compare distance from coordinate to each kind of node
+ * Black: to it's city coordinate
+ * Gray: to nearest edge of the node
+ */
 public class PRQTComparator implements Comparator<PRQT> {
 	private int x;
 	private int y;
@@ -20,6 +26,10 @@ public class PRQTComparator implements Comparator<PRQT> {
 		this.y = y;
 	}
 	
+	/* 
+	 * Compare their distance(non-Javadoc)
+	 * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
+	 */
 	@Override
 	public int compare(PRQT p1, PRQT p2) {
 		if (getDistance(p1) >= 0 && getDistance(p2) >= 0) {
@@ -39,11 +49,17 @@ public class PRQTComparator implements Comparator<PRQT> {
 		}
 	}
 	
+	/* 
+	 * Return distance from node to coordinate
+	 * Black: to it's city coordinate
+	 * Gray: to nearest edge of the node
+	 */
 	private double getDistance(PRQT head) {
 		if (head.getType().equals("black")) {
 			City city = head.getCity();
 			return Math.sqrt(Math.pow(Math.abs(city.getX() - x), 2) + Math.pow(Math.abs(city.getY() - y), 2));
 		} else if (head.getType().equals("gray")) {
+			// List all edges of gray node
 			GrayNode gray = (GrayNode)head;
 			double top = (double)gray.getTop() - 1;
 			double left = (double)gray.getLeft();
@@ -62,6 +78,8 @@ public class PRQTComparator implements Comparator<PRQT> {
 			double d2 = l2.ptLineDist(x, y);
 			double d3 = l3.ptLineDist(x, y);
 			double d4 = l4.ptLineDist(x, y);
+			
+			// Distance to the nearest edge
 			double min = d1;
 			if (d2 < min) {
 				min = d2;

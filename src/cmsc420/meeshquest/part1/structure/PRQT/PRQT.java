@@ -3,6 +3,9 @@ package cmsc420.meeshquest.part1.structure.PRQT;
 import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.CityCoordinates;
 
+/*
+ * Interface for nodes
+ */
 public interface PRQT {	
 	public int getLeft();
 
@@ -26,8 +29,15 @@ public interface PRQT {
 	
 	public int getRadius();
 	
+	/* 
+	 * Return city object
+	 * Only valid for black node
+	 */
 	public City getCity();
 	
+	/*
+	 * Return type of the node
+	 */
 	public String getType();
 	
 	public String toString();

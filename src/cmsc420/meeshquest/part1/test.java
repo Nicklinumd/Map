@@ -4,6 +4,7 @@ import cmsc420.meeshquest.part1.structure.City;
 import cmsc420.meeshquest.part1.structure.PRQT.GrayNode;
 import cmsc420.meeshquest.part1.structure.PRQT.PRQTAction;
 
+// Simple test without xml
 public class test {
 	public static void main(String[] args) {
 		int width = 256;
